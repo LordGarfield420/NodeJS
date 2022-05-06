@@ -9,7 +9,7 @@ http.createServer(function (req,res) {
     fs.readFile(filename, function(err, data){
         if (err){
             res.writeHead(404, {'Content-Type': 'text/html'});
-            return res.end("404 not found");
+            return res.end("tell me the html file bozo...");
 
         }
         res.writeHead(200, {'Content-Type': 'text/html'});
@@ -18,4 +18,4 @@ http.createServer(function (req,res) {
     });
 }).listen(8080);
 
-//run aid: demo_fileserver.js
+//run aid: node demo_fileserver.js
