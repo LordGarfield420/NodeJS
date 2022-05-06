@@ -1,0 +1,27 @@
+A package in Node.js contains all the files you need for a module.
+
+Downloading a package is very easy.
+
+Open the command line interface and tell NPM to download the package you want.
+Example:
+    download a package called "upper-case":
+
+in cmd,
+    C:\Users\Your Name>npm install upper-case
+
+Now you have downloaded and installed your first package!
+
+NPM creates a folder named "node_modules", where the package will be placed. All packages you install in the future will be placed in this folder
+
+My project now has a folder structure like this:
+
+C:\Users\kanishka\nodejs\upper-case  **not actual pwd
+
+*******************************************************
+
+How to use a package?
+
+Include the "upper-case" package the same way you include any other module:
+
+a practical example is given in the demo_packages.js file
+
