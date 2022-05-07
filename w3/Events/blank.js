@@ -4,14 +4,14 @@ var eventEmitter = new events.EventEmitter();
 //create an event handler:
 
 var myEventHandler = function() {
-    console.log('I hear a scream');
+    console.log('I hear a screamoo');
 }
 
 //assign the event handler to an event:
-eventEmitter.on('scream', myEventHandler);
+eventEmitter.on('screamx', myEventHandler);
 
 //fire the 'scream' event:
-eventEmitter.emit('scream');
+eventEmitter.emit('screamx');
 
 
 
