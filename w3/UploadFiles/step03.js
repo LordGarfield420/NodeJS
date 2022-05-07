@@ -7,7 +7,7 @@ http.createServer(function (req, res) {
     var form = new formidable.IncomingForm();
     form.parse(req, function (err, fields, files) {
       var oldpath = files.filetoupload.filepath;
-      var newpath = 'C:/Users/Your Name/' + files.filetoupload.originalFilename;
+      var newpath = 'C:\Users\KanishkaDharmasena\Desktop\Practicals\NodeJS\NodeJS\w3\UploadFiles' + files.filetoupload.originalFilename;
       fs.rename(oldpath, newpath, function (err) {
         if (err) throw err;
         res.write('File uploaded and moved!');
@@ -23,3 +23,5 @@ http.createServer(function (req, res) {
     return res.end();
   }
 }).listen(8080);
+
+
