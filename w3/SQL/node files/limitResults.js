@@ -1,4 +1,4 @@
-//order alphabetically
+
 
 var mysql = require('mysql');
 
@@ -11,15 +11,21 @@ var con = mysql.createConnection({
 
 con.connect(function(err) {
   if (err) throw err;
-  con.query("SELECT * FROM customers ORDER BY name", function (err, result) {
+  var sql = "SELECT * FROM customers LIMIT 5";
+  con.query(sql, function (err, result) {
     if (err) throw err;
     console.log(result);
   });
-});
+})
 
-//run aid node OrderBy.js
 
-//order by DESC
+
+
+//run aid node limitResults.js
+
+//use this snippet to start entry count from a different position
+//!!! 2 means starting position is 3 not 2. The 0,1,2 way
+
 
 /*
 var mysql = require('mysql');
@@ -33,11 +39,11 @@ var con = mysql.createConnection({
 
 con.connect(function(err) {
   if (err) throw err;
-  con.query("SELECT * FROM customers ORDER BY name DESC", function (err, result) {
+  var sql = "SELECT * FROM customers LIMIT 5 OFFSET 2";
+  con.query(sql, function (err, result) {
     if (err) throw err;
     console.log(result);
   });
 });
 
- */
-
+*/

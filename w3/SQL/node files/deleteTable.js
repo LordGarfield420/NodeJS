@@ -1,4 +1,4 @@
-//order alphabetically
+
 
 var mysql = require('mysql');
 
@@ -11,17 +11,22 @@ var con = mysql.createConnection({
 
 con.connect(function(err) {
   if (err) throw err;
-  con.query("SELECT * FROM customers ORDER BY name", function (err, result) {
+  var sql = "DROP TABLE tablename";
+  con.query(sql, function (err, result) {
     if (err) throw err;
-    console.log(result);
+    console.log("Table deleted");
   });
 });
 
-//run aid node OrderBy.js
 
-//order by DESC
+
+
+//run aid node deleteTable.js
+
+//use this snippet to delete a table ONLY IF it exists
 
 /*
+
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
@@ -33,11 +38,12 @@ var con = mysql.createConnection({
 
 con.connect(function(err) {
   if (err) throw err;
-  con.query("SELECT * FROM customers ORDER BY name DESC", function (err, result) {
+  var sql = "DROP TABLE IF EXISTS tablename";
+  con.query(sql, function (err, result) {
     if (err) throw err;
     console.log(result);
   });
 });
 
- */
 
+*/
