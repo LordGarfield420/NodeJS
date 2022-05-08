@@ -22,6 +22,16 @@ var mailOptions = {
   text: 'That was easy!'
 }
 
+************************************************************************************************************************
+
+         To send HTML formatted text in your email, use the "html" property instead of the "text" property
+
+var mailOptions = {
+  from: 'youremail@gmail.com',
+  to: 'myfriend@yahoo.com',
+  subject: 'Sending Email using Node.js',
+  html: '<h1>Welcome</h1><p>That was easy!</p>'
+}
 
 */
 
