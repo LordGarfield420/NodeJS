@@ -10,6 +10,21 @@ var transporter = nodemailer.createTransport({
   }
 });
 
+
+
+/*          use this instead of the snippet below to send email to multiple recipients. 
+
+
+var mailOptions = {
+  from: 'youremail@gmail.com',
+  to: 'myfriend@yahoo.com, myotherfriend@yahoo.com',
+  subject: 'Sending Email using Node.js',
+  text: 'That was easy!'
+}
+
+
+*/
+
 var mailOptions = {
   from: 'jamesrodrickgarfield1999@gmail.com',
   to: 'sahan.kaniska@gmail.com',
